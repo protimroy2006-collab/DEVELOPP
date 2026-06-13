@@ -132,7 +132,12 @@ function setupRecaptcha() {
 phoneLoginBtn.addEventListener('click', () => {
     const phoneNumber = phoneInput.value.trim();
     if (!phoneNumber) {
-        showMessage("Please enter a valid phone number with country code (e.g., +12345678900)", true);
+        showMessage("Please enter a valid phone number", true);
+        return;
+    }
+    
+    if (!phoneNumber.startsWith('+')) {
+        showMessage("Please include your country code (e.g., +91 for India)", true);
         return;
     }
 
