@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -23,7 +24,9 @@ def upload_file():
     file = request.files.get('file')
 
     if file and file.filename != '':
-        filepath = os.path.join(UPLOAD_FOLDER, file.filename)
+        # SECURE the filename to prevent path traversal attacks
+        filename = secure_filename(file.filename)
+        filepath = os.path.join(UPLOAD_FOLDER, filename)
         file.save(filepath)
 
         return "File uploaded successfully!"
