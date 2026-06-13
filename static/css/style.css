@@ -133,10 +133,17 @@ section { padding: 120px 5%; max-width: 1400px; margin: 0 auto; }
     font-size: clamp(2.8rem, 5vw, 4.2rem); margin-bottom: 24px;
     font-weight: 800; line-height: 1.1; letter-spacing: -0.04em;
 }
+@keyframes shimmerGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
+    background-size: 200% auto;
+    animation: shimmerGradient 4s linear infinite;
 }
 .hero-content p {
     font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--text-muted);
@@ -611,8 +618,14 @@ input:focus, textarea:focus {
 .watermark-section {
     position: relative; padding: 100px 5%; overflow: hidden; background: var(--bg-card); border-bottom: 1px solid var(--border);
 }
+@keyframes panWatermark {
+    0% { transform: translateX(-50%); }
+    50% { transform: translateX(-40%); }
+    100% { transform: translateX(-50%); }
+}
 .watermark-bg {
-    position: absolute; top: 10%; left: 50%; transform: translateX(-50%); font-size: 12vw; font-weight: 800; color: rgba(0, 0, 0, 0.03); z-index: 0; user-select: none; white-space: nowrap; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; pointer-events: none;
+    position: absolute; top: 10%; left: 50%; font-size: 12vw; font-weight: 800; color: rgba(0, 0, 0, 0.03); z-index: 0; user-select: none; white-space: nowrap; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; pointer-events: none;
+    animation: panWatermark 30s ease-in-out infinite;
 }
 .watermark-content { position: relative; z-index: 1; margin-top: 20px; }
 
@@ -649,3 +662,13 @@ input:focus, textarea:focus {
 .faq-item.active { border-color: var(--accent-1); box-shadow: var(--shadow-soft); }
 .faq-item.active .faq-icon { transform: rotate(180deg); }
 .faq-item.active .faq-answer { padding-bottom: 24px; max-height: 500px; transition: max-height 0.5s ease-in-out, padding 0.5s ease; }
+
+/* ─── EXTRA PREMIUM ANIMATIONS ─── */
+@keyframes iconFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); color: var(--accent-1); }
+    100% { transform: translateY(0); }
+}
+.clean-card:hover i, .why-card:hover .why-icon, .process-step:hover .step-number { 
+    animation: iconFloat 2s ease-in-out infinite; 
+}
