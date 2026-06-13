@@ -588,3 +588,46 @@ input:focus, textarea:focus {
     border-color: var(--accent-1) !important;
     box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
 }
+
+/* ─── WATERMARK SECTIONS ─── */
+.watermark-section {
+    position: relative; padding: 100px 5%; overflow: hidden; background: var(--bg-card); border-bottom: 1px solid var(--border);
+}
+.watermark-bg {
+    position: absolute; top: 10%; left: 50%; transform: translateX(-50%); font-size: 12vw; font-weight: 800; color: rgba(232, 236, 244, 0.4); z-index: 0; user-select: none; white-space: nowrap; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; pointer-events: none;
+}
+.watermark-content { position: relative; z-index: 1; margin-top: 20px; }
+
+/* ─── MINIMAL LIST GRID (Industries & Solutions) ─── */
+.minimal-list-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding-top: 40px; border-top: 1px solid var(--border); text-align: left;
+}
+.minimal-item h4 { font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.minimal-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ─── PROCESS ─── */
+.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; position: relative; margin-top: 40px; }
+.process-step { background: var(--bg-main); padding: 32px 24px; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow-soft); position: relative; transition: all 0.3s ease; text-align: left; }
+.process-step:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--accent-1); }
+.step-number { position: absolute; top: -15px; left: 24px; background: var(--gradient-primary); color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(99,102,241,0.3); }
+.process-step h4 { margin-top: 12px; margin-bottom: 12px; font-size: 1.2rem; }
+.process-step p { font-size: 0.9rem; line-height: 1.6; }
+
+/* ─── WHY US ─── */
+.why-us-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; text-align: left;}
+.why-card { display: flex; gap: 20px; background: transparent; padding: 28px; border-radius: 20px; transition: all 0.3s ease; border: 1px solid transparent; }
+.why-card:hover { background: var(--bg-card); border-color: var(--border); box-shadow: var(--shadow-soft); }
+.why-icon { font-size: 2.2rem; color: var(--accent-2); flex-shrink: 0; }
+.why-card h4 { font-size: 1.25rem; margin-bottom: 8px; font-weight: 700; }
+.why-card p { line-height: 1.6; }
+
+/* ─── FAQ ACCORDION ─── */
+.faq-container { max-width: 800px; margin: 40px auto 0; text-align: left; }
+.faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 16px; overflow: hidden; transition: all 0.3s ease; }
+.faq-question { padding: 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 1.1rem; color: var(--text-primary); transition: color 0.3s ease; }
+.faq-question:hover { color: var(--accent-1); }
+.faq-icon { transition: transform 0.3s ease; color: var(--accent-1); font-size: 1.2rem; }
+.faq-answer { padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.4s ease; color: var(--text-muted); line-height: 1.6; }
+.faq-item.active { border-color: var(--accent-1); box-shadow: var(--shadow-soft); }
+.faq-item.active .faq-icon { transform: rotate(180deg); }
+.faq-item.active .faq-answer { padding-bottom: 24px; max-height: 500px; transition: max-height 0.5s ease-in-out, padding 0.5s ease; }
