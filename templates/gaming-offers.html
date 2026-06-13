@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVELOP | PC Game Sellers</title>
+    <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gaming.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Main Site
+        </a>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo_transparent.png') }}" alt="DEVELOP Logo">
+        </div>
+        <div style="width: 100px;"></div> <!-- Spacer for flexbox -->
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h2 class="text-orange">DEVELOP</h2>
+        <p class="subtitle text-cyan" style="margin-bottom: 20px;">YOUR GAME. OUR PLATFORM.</p>
+        
+        <h1>SELL PC GAMES <br><span class="text-cyan">ONLINE</span></h1>
+        
+        <p class="subtitle" style="margin-top: 20px;">
+            BUILT FOR <span class="text-orange">PC GAME SELLERS</span>. MADE TO <span class="text-cyan">GROW</span> YOUR BUSINESS.
+        </p>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="payment-section">
+        <h3 class="payment-title">CHOOSE YOUR PAYMENT METHOD</h3>
+        
+        <div class="pricing-container">
+            
+            <!-- WhatsApp Pricing -->
+            <div class="pricing-card orange-card">
+                <i class="fab fa-whatsapp pricing-icon text-orange"></i>
+                <h3>WHATSAPP<br>AUTOMATED</h3>
+                <div class="pricing-val text-orange">&#8377;1799</div>
+                <p>Easy & fast setup via<br>WhatsApp automation</p>
+            </div>
+
+            <div class="or-divider">OR</div>
+
+            <!-- Website Pricing -->
+            <div class="pricing-card cyan-card">
+                <i class="fas fa-globe pricing-icon text-cyan"></i>
+                <h3>DIRECT PAYMENT<br>ON WEBSITE</h3>
+                <div class="pricing-val text-cyan">&#8377;2499</div>
+                <p>Pay directly on our website<br>for instant access</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <h3 class="features-title">&#9733; LIFETIME SELLER ACCESS &#9733;</h3>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-rocket"></i>
+                <h4>INSTANT SETUP</h4>
+                <p>Start your store in minutes</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-gamepad"></i>
+                <h4>SELL MORE</h4>
+                <p>List unlimited PC games</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lock"></i>
+                <h4>100% SECURE</h4>
+                <p>Safe & trusted platform</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users text-cyan"></i>
+                <h4>REACH GAMERS</h4>
+                <p class="text-cyan">Connect with thousands of PC gamers</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line text-orange"></i>
+                <h4 class="text-orange">GROW BIG</h4>
+                <p>More sales. More profits. More growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus -->
+    <section class="bonus-section">
+        <p style="text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; color: var(--text-muted);">We provide with the website :</p>
+        <div class="bonus-banner">
+            
+            <div class="bonus-items">
+                <div class="bonus-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>1 LOGO</h4>
+                </div>
+                <div class="plus">+</div>
+                <div class="bonus-item">
+                    <i class="fas fa-file-image"></i>
+                    <h4>1 POSTER</h4>
+                </div>
+                <div class="plus">+</div>
+                <div class="bonus-item">
+                    <i class="fas fa-shield-check"></i>
+                    <h4>6 MONTH<br>SERVICE</h4>
+                </div>
+            </div>
+
+            <div class="bonus-text">
+                <h2 class="text-orange">THIS IS GROWTH <br><span>FOR YOUR BUSINESS. <i class="fas fa-arrow-trend-up text-cyan" style="font-size: 2rem;"></i></span></h2>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

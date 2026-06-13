@@ -12,6 +12,10 @@ if not os.path.exists(UPLOAD_FOLDER):
 def home():
     return render_template('index.html')
 
+@app.route('/offers')
+def offers():
+    return render_template('offers.html')
+
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -28,4 +32,4 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

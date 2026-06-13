@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers | DEVELOP - Website Design Kolkata</title>
+    <meta name="description" content="Exclusive website development offers from DEVELOP. Start your own PC Game Selling website with automated WhatsApp payments.">
+    <meta name="keywords" content="buy game selling website, PC game seller store, website development offers, web design Kolkata">
+    <meta name="author" content="DEVELOP">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://develop-agency.com/offers">
+    <meta property="og:title" content="DEVELOP Special Offers | Build Your PC Game Store">
+    <meta property="og:description" content="Start your own PC Game Selling website today.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/logo_transparent.png', _external=True) }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar scrolled">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo_transparent.png') }}" alt="DEVELOP">
+    </div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#capabilities">Services</a></li>
+        <li><a href="{{ url_for('offers') }}" style="color:var(--accent-1);">Offers</a></li>
+        <li><a href="mailto:gmail-development.workkk@gmail.com">Support</a></li>
+    </ul>
+    <a href="{{ url_for('home') }}#contact" class="quote-btn">Get a Quote</a>
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- Offers Hero -->
+<section class="offers-hero">
+    <div class="section-tag reveal" style="margin-bottom:20px;">Limited Time Offers</div>
+    <h1 class="reveal" style="transition-delay:0.1s;">Exclusive <span class="gradient-text">Deals</span></h1>
+    <p class="reveal" style="transition-delay:0.2s;">Premium packages designed to help you launch, grow, and dominate online.</p>
+</section>
+
+<!-- Offers Grid -->
+<section class="offers-grid">
+    <div class="pricing-grid">
+
+        <!-- Referral -->
+        <div class="pricing-card reveal" style="transition-delay: 0.1s;">
+            <div class="badge">Reward</div>
+            <h3>Referral Program</h3>
+            <div class="price">&#8377;999</div>
+            <div class="billing">Instant Cash Reward</div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> Refer a client to DEVELOP</li>
+                <li><i class="fas fa-check"></i> Get ₹999 off your next service or as cash</li>
+                <li><i class="fas fa-check"></i> No limit on referrals</li>
+            </ul>
+            <a href="{{ url_for('home') }}#contact" class="btn-pricing">Claim Offer</a>
+        </div>
+
+        <!-- PC Game Sellers -->
+        <div class="pricing-card featured reveal" style="transition-delay: 0.2s;">
+            <div class="badge">PC Game Sellers</div>
+            <h3>Start Your Own Game Store</h3>
+            <div class="billing" style="margin-bottom:24px;">Built specifically for PC game sellers. Get a logo, a poster, and 6 months of service included!</div>
+            
+            <div style="background:rgba(255,255,255,0.12); border-radius:16px; padding:20px; margin-bottom:16px;">
+                <h4 style="font-size:1rem; margin-bottom:4px; color:#fff;">WhatsApp Automated</h4>
+                <div style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:6px;">&#8377;1,799</div>
+                <p style="font-size:0.9rem; color:rgba(255,255,255,0.75);">Easy & fast setup. Customers order via automated WhatsApp flows.</p>
+            </div>
+            
+            <div style="background:rgba(255,255,255,0.2); border-radius:16px; padding:20px; margin-bottom:24px;">
+                <h4 style="font-size:1rem; margin-bottom:4px; color:#fff;">Direct Payment</h4>
+                <div style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:6px;">&#8377;2,499</div>
+                <p style="font-size:0.9rem; color:rgba(255,255,255,0.75);">Full e-commerce setup. Customers pay securely directly on your website.</p>
+            </div>
+            
+            <a href="{{ url_for('home') }}#contact" class="btn-pricing active">Build My Store</a>
+        </div>
+
+        <!-- Service Offer -->
+        <div class="pricing-card reveal" style="transition-delay: 0.3s;">
+            <div class="badge">Subscription</div>
+            <h3>Service Offer</h3>
+            <div class="price">6 Months</div>
+            <div class="billing">Free Maintenance & Service</div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> First 6 months of service fully included</li>
+                <li><i class="fas fa-check"></i> After 6 months: Only ₹99/month</li>
+                <li><i class="fas fa-check"></i> Hosting, bug fixes, and uptime monitoring</li>
+                <li><i class="fas fa-check"></i> Cancel anytime</li>
+            </ul>
+            <a href="{{ url_for('home') }}#contact" class="btn-pricing">Get Started</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918017650178" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
