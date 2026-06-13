@@ -22,6 +22,15 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Custom Selection */
+::selection { background: rgba(99,102,241,0.2); color: var(--accent-1); }
+
 html {
     scroll-behavior: smooth;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -317,12 +326,18 @@ section h2 { font-size: 2.5rem; margin-bottom: 48px; text-align: center; font-we
     background: var(--gradient-primary); color: #fff;
     border: none; box-shadow: 0 12px 40px rgba(99,102,241,0.3);
 }
+@keyframes badgePulse {
+    0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
 .pricing-card .badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
     background: var(--accent-4); color: #fff;
     padding: 5px 16px; border-radius: 999px; font-size: 0.75rem;
     font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
     box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+    animation: badgePulse 2s infinite;
 }
 .pricing-card h3 { font-size: 1.2rem; margin-bottom: 16px; font-weight: 600; }
 .pricing-card .price { font-size: 2.8rem; font-weight: 800; margin-bottom: 8px; }
@@ -401,7 +416,10 @@ section h2 { font-size: 2.5rem; margin-bottom: 48px; text-align: center; font-we
 .footer-section ul a:hover { color: #fff; }
 .social-links { display: flex; gap: 16px; }
 .social-links a { color: rgba(255,255,255,0.6); font-size: 1.25rem; transition: all 0.3s ease; }
-.social-links a:hover { color: #fff; transform: translateY(-2px); }
+.social-links a:hover { color: #fff; transform: translateY(-3px) scale(1.1); }
+.social-links a[href*="linkedin.com"]:hover { color: #0a66c2; }
+.social-links a[href*="instagram.com"]:hover { color: #e1306c; }
+.social-links a:has(.fa-twitter):hover { color: #1da1f2; }
 .footer-bottom { text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
 
 /* ─── RESPONSIVE ─── */
@@ -476,8 +494,8 @@ section h2 { font-size: 2.5rem; margin-bottom: 48px; text-align: center; font-we
     justify-content: center; gap: 12px; transition: all 0.2s ease;
     font-family: 'Inter', sans-serif;
 }
-.google-btn { background: #fff; color: #1f2937; border: 1px solid var(--border); }
-.google-btn:hover { background: #f9fafb; transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+.google-btn { background: #fff; color: #1f2937; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.google-btn:hover { background: #f9fafb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 .google-btn i { color: #ea4335; font-size: 1.2rem; }
 
 .divider { display: flex; align-items: center; text-align: center; margin: 24px 0; color: var(--text-muted); font-size: 0.85rem; }
@@ -594,7 +612,7 @@ input:focus, textarea:focus {
     position: relative; padding: 100px 5%; overflow: hidden; background: var(--bg-card); border-bottom: 1px solid var(--border);
 }
 .watermark-bg {
-    position: absolute; top: 10%; left: 50%; transform: translateX(-50%); font-size: 12vw; font-weight: 800; color: rgba(232, 236, 244, 0.4); z-index: 0; user-select: none; white-space: nowrap; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; pointer-events: none;
+    position: absolute; top: 10%; left: 50%; transform: translateX(-50%); font-size: 12vw; font-weight: 800; color: rgba(0, 0, 0, 0.03); z-index: 0; user-select: none; white-space: nowrap; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; pointer-events: none;
 }
 .watermark-content { position: relative; z-index: 1; margin-top: 20px; }
 
